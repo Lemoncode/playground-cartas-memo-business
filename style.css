@@ -1,13 +1,14 @@
 /* Estilo general */
 body {
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(135deg, #f5f7fa, #e4ecf5); /* fondo suave */
+  background: linear-gradient(135deg, #f5f7fa, #e4ecf5);
   color: #333;
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding: 40px 0;
+  flex-direction: column;
 }
 
 /* Contenedor principal */
@@ -68,4 +69,9 @@ a:hover {
   padding: 2px 6px;
   border-radius: 6px;
   color: #0b3d91;
+}
+
+.tituloSeccion {
+  color: #0b3d91;
+  text-decoration: underline;
 }
