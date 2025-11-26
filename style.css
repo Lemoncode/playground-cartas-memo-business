@@ -22,6 +22,7 @@ body {
   flex-direction: column;
   text-align: center;
   gap: 25px;
+  margin: 0 auto;
 }
 
 /* Título principal */
@@ -64,7 +65,7 @@ a:hover {
 /* Comando destacado */
 .comando {
   font-weight: bold;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   background-color: #eaf3ff;
   padding: 2px 6px;
   border-radius: 6px;

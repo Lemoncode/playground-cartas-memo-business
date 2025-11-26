@@ -5,81 +5,165 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>00-barajar-cartas</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <div class="app">
       <h1>Ejercicio paso a paso memo (motor)</h1>
       <section>
-        <p>Primero arrancaremos por clonar el <a href="https://github.com/Lemoncode/typescript-sandbox">sandbox</a> de typescript que ya conoces de los ejercicios anteriores.</p>
+        <p>
+          Primero arrancaremos por clonar el
+          <a href="https://github.com/Lemoncode/typescript-sandbox">sandbox</a>
+          de typescript que ya conoces de los ejercicios anteriores.
+        </p>
 
-        <img src="./src/imagenes/sandbox-typescript.png" />
+        <img src="./assets/sandbox-typescript.png" />
 
-        <p>Clona esta carpeta en una carpeta a parte (por si quieres usar esta misma estructura para más ejercicios), y teniendo cuidado con la carpeta oculta de .git copia el contenido y pegalo en el repositorio que usas para tus ejercicios de los diferentes módulos que tengas.</p>
+        <p>
+          Clona esta carpeta en una carpeta a parte (por si quieres usar esta
+          misma estructura para más ejercicios), y teniendo cuidado con la
+          carpeta oculta de .git copia el contenido y pegalo en el repositorio
+          que usas para tus ejercicios de los diferentes módulos que tengas.
+        </p>
 
         <p>Acuerdate de hacer commit y push a los cambios</p>
       </section>
 
       <section>
-        <p>Una vez tengamos copiado el contenido (si quieres, si no lo podemos hacer más adelante), abre la consola del visual studio code (Terminal/Nueva Terminal o ctrl + ñ) e instala las dependencias del proyecto con el comando <span class="comando">npm i</span></p>
-      </section>
-
-      <section>
-        <p>Si quieres de momento puedes crearte dentro de src un fichero llamado modelo y copia el contenido que tienes en el mismo fichero de este proyecto. Para no perder el progreso haz commit y push a tu repositorio.</p>
-      </section>
-
-      <section>
         <p>
-          Vamos a ir poco a poco implementando el código de esta parte del ejercicio para que sea más fácil el trabajar con el proyecto final. Usaremos como base esta <a href="https://stackblitz.com/github/Lemoncode/playground-cartas-memo-business/tree/main">web</a>. Stackblitz es una web que usará la base de este repositorio, instalará las dependencias y nos creará una proyecto en el que podremos trabajar como si fuera el visual studio pero de forma online. Una vez se cargue podrás ejecutar el comando <span class="comando">npm run test</span>
+          Una vez tengamos copiado el contenido (si quieres, si no lo podemos
+          hacer más adelante), abre la consola del visual studio code
+          (Terminal/Nueva Terminal o ctrl + ñ) e instala las dependencias del
+          proyecto con el comando <span class="comando">npm i</span>
         </p>
       </section>
 
       <section>
-        <p>Como verás la estructura de ficheros de src es la siguiente. Por cada función que tenemos que implementar en motor hemos creado un fichero de test donde además de hacer el código de la funcíon, deberas crear los test que harán pasar dicha función.</p>
+        <p>
+          Si quieres de momento puedes crearte dentro de src un fichero llamado
+          modelo y copia el contenido que tienes en el mismo fichero de este
+          proyecto. Para no perder el progreso haz commit y push a tu
+          repositorio.
+        </p>
+      </section>
+
+      <section>
+        <p>
+          Vamos a ir poco a poco implementando el código de esta parte del
+          ejercicio para que sea más fácil el trabajar con el proyecto final.
+          Usaremos como base esta
+          <a
+            href="https://stackblitz.com/github/Lemoncode/playground-cartas-memo-business/tree/main"
+            >web</a
+          >. Stackblitz es una web que usará la base de este repositorio,
+          instalará las dependencias y nos creará una proyecto en el que
+          podremos trabajar como si fuera el visual studio pero de forma online.
+          Una vez se cargue podrás ejecutar el comando
+          <span class="comando">npm run test</span>
+        </p>
+      </section>
+
+      <section>
+        <p>
+          Como verás la estructura de ficheros de src es la siguiente. Por cada
+          función que tenemos que implementar en motor hemos creado un fichero
+          de test donde además de hacer el código de la funcíon, deberas crear
+          los test que harán pasar dicha función.
+        </p>
       </section>
 
       <section>
         <p class="tituloSeccion">barajarCartas</p>
 
-        <p>Esta función recive como parámetro un array de cartas y devuelve un array de cartas, ya barajada. Para que sea fácil (esta función tiene algo de dificultad), te dejamos este <a src="https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array">hilo</a> de stackoverflow donde se ven diferentes maneras de abordar el barajado de elementos.</p>
+        <p>
+          Esta función recive como parámetro un array de cartas y devuelve un
+          array de cartas, ya barajada. Para que sea fácil (esta función tiene
+          algo de dificultad), te dejamos este
+          <a
+            src="https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array"
+            >hilo</a
+          >
+          de stackoverflow donde se ven diferentes maneras de abordar el
+          barajado de elementos.
+        </p>
       </section>
 
       <section>
         <p class="tituloSeccion">sePuedeVoltearLaCarta</p>
 
-        <p>Aquí podremos indicar si se puede voltear o no (true o false) la carta pulsada en el html. Recuerda que cada carta tiene los flags estaVuelta y encontrada donde podremos checkear esto.</p>
+        <p>
+          Aquí podremos indicar si se puede voltear o no (true o false) la carta
+          pulsada en el html. Recuerda que cada carta tiene los flags estaVuelta
+          y encontrada donde podremos checkear esto.
+        </p>
       </section>
 
       <section>
         <p class="tituloSeccion">voltearLaCarta</p>
 
-        <p>Esta función será la encargada de modificar el objeto tablero. Lo primero será poner a true la propiedad de estaVuelta (que indica que ha sido volteada la carta que sea). Lo siguiente, será ver si el indice de la carta que hemos pulsado se tiene que guardar en el indiceCartaVolteadaA o indiceCartaVolteadaB (estas dos propiedades guardarán de manera provisional los indices para luego comprobar si son o no pareja). ¿Cómo podemos diferenciar si el indice va al A o al B? La pista está en el estado de la partida. Cuando iniciamos la partida, el estado está en 'CeroCartasLevantadas', si cuando pulso sobre la primera carta, ese es el estado, entonces el indice tiene que ir a indiceCartaVolteadaA, y por lo tanto el estado pasa a 'UnaCartaLevantada'. Por lo tanto, el siguiente punto es muy lógico, si el estado cuando pulsamos sobre la segunda carta es 'UnaCartaLevantada'podemos añadir el índice a indiceCartaVolteadaB y cambiar el estado a 'DosCartasLevantadas'.</p>
+        <p>
+          Esta función será la encargada de modificar el objeto tablero. Lo
+          primero será poner a true la propiedad de estaVuelta (que indica que
+          ha sido volteada la carta que sea). Lo siguiente, será ver si el
+          indice de la carta que hemos pulsado se tiene que guardar en el
+          indiceCartaVolteadaA o indiceCartaVolteadaB (estas dos propiedades
+          guardarán de manera provisional los indices para luego comprobar si
+          son o no pareja). ¿Cómo podemos diferenciar si el indice va al A o al
+          B? La pista está en el estado de la partida. Cuando iniciamos la
+          partida, el estado está en 'CeroCartasLevantadas', si cuando pulso
+          sobre la primera carta, ese es el estado, entonces el indice tiene que
+          ir a indiceCartaVolteadaA, y por lo tanto el estado pasa a
+          'UnaCartaLevantada'. Por lo tanto, el siguiente punto es muy lógico,
+          si el estado cuando pulsamos sobre la segunda carta es
+          'UnaCartaLevantada'podemos añadir el índice a indiceCartaVolteadaB y
+          cambiar el estado a 'DosCartasLevantadas'.
+        </p>
       </section>
 
       <section>
         <p class="tituloSeccion">sonPareja</p>
 
-        <p>Esta es la más fácil de todas, saber si la idFoto de las cartas que hemos pulsado son el mismo o no.</p>
+        <p>
+          Esta es la más fácil de todas, saber si la idFoto de las cartas que
+          hemos pulsado son el mismo o no.
+        </p>
 
-        <p>Pista: Puedes usar el array method de every que comprueba si todos los elementos de un array cumplen con la condición que le indiquemos.</p>
+        <p>
+          Pista: Puedes usar el array method de every que comprueba si todos los
+          elementos de un array cumplen con la condición que le indiquemos.
+        </p>
       </section>
 
       <section>
         <p class="tituloSeccion">parejaEncontrada</p>
 
-        <p>Esta función se encargará de modificar de true a false la propiedad de encontrada. Acuérdate de que para poder encontrar la siguiente pareja, las propiedades de estaVuelta el estado de la partida y los índices A y B tienen que estar de nuevo como al prinicipio. estaVuelta a false. los índices A y B a undefined y el estado a 'CeroCartasLevantadas'.</p>
+        <p>
+          Esta función se encargará de modificar de true a false la propiedad de
+          encontrada. Acuérdate de que para poder encontrar la siguiente pareja,
+          las propiedades de estaVuelta el estado de la partida y los índices A
+          y B tienen que estar de nuevo como al prinicipio. estaVuelta a false.
+          los índices A y B a undefined y el estado a 'CeroCartasLevantadas'.
+        </p>
       </section>
 
       <section>
         <p class="tituloSeccion">parejaNoEncontrada</p>
 
-        <p>Lo mismo que la anterior, pero con la diferencia de que en vez de modificar encontrado, ahora será volver a false la propiedad de estaVuelta.</p>
+        <p>
+          Lo mismo que la anterior, pero con la diferencia de que en vez de
+          modificar encontrado, ahora será volver a false la propiedad de
+          estaVuelta.
+        </p>
       </section>
 
       <section>
         <p class="tituloSeccion">esPartidaCompleta</p>
 
-        <p>Si todos los elementos cumplen con la condición de que la propiedad encontrada está a true, la partida está completa en caso contrario false.</p>
+        <p>
+          Si todos los elementos cumplen con la condición de que la propiedad
+          encontrada está a true, la partida está completa en caso contrario
+          false.
+        </p>
 
         <p>Pista: Puedes hacerlo muy fácil con el array method every.</p>
       </section>
@@ -87,23 +171,40 @@
       <section>
         <p class="tituloSeccion">iniciaPartida</p>
 
-        <p>Esta función se ejecutará cuando pulsemos sobre el botón de iniciar  partida. Aquí tendremos que hacer varias cosas.</p>
+        <p>
+          Esta función se ejecutará cuando pulsemos sobre el botón de iniciar
+          partida. Aquí tendremos que hacer varias cosas.
+        </p>
 
         <ul>
           <li>Barajar el array de cartas.</li>
-          <li>Actualizar el array de cartas del tablero con las cartas barajadas del punto anterior.</li>
+          <li>
+            Actualizar el array de cartas del tablero con las cartas barajadas
+            del punto anterior.
+          </li>
           <li>Modificar el estado de la partida a 'CeroCartasLevantadas'.</li>
         </ul>
       </section>
 
       <section>
-        <p>Una vez implementadas todas las funciones con los respectivos test, tocará ver si todos los test están en verde o tenemos algún fallo.</p>
+        <p>
+          Una vez implementadas todas las funciones con los respectivos test,
+          tocará ver si todos los test están en verde o tenemos algún fallo.
+        </p>
 
-        <img src="./src/imagenes/testResults.png"/>
+        <img src="./assets/testResults.png" />
 
-        <p>Una vez te asegures que todos los test pasan, puedes copiar el contenido del fichero de motor de este proyecto a tu implementación real que creamos al principio de esta guia paso a paso.</p>
+        <p>
+          Una vez te asegures que todos los test pasan, puedes copiar el
+          contenido del fichero de motor de este proyecto a tu implementación
+          real que creamos al principio de esta guia paso a paso.
+        </p>
 
-        <p>También puedes crearte una carpeta de test, y copiar todos los test que has ido creando como está en este proyecto, un fichero por cada función y dentro los diferentes test.</p>
+        <p>
+          También puedes crearte una carpeta de test, y copiar todos los test
+          que has ido creando como está en este proyecto, un fichero por cada
+          función y dentro los diferentes test.
+        </p>
       </section>
     </div>
   </body>
