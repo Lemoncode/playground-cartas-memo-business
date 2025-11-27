@@ -58,9 +58,13 @@
           >. Stackblitz es una web que usará la base de este repositorio,
           instalará las dependencias y nos creará una proyecto en el que
           podremos trabajar como si fuera el visual studio pero de forma online.
-          Una vez se cargue podrás ejecutar el comando
-          <span class="comando">npm run test</span>
         </p>
+      </section>
+
+      <section>
+        Cuando termine de clonar el repositorio (es posible que tarde unos minutos en hacerlo), verás que de manera automática el proyecto estará ejecutándose en el <span class="comando">http://localhost:5173/</span>. Para poder ejecutar los test, puedes parar la consola con el atajo de teclado  <span class="comando">ctrl + c</span>
+
+        Una vez se cargue podrás ejecutar el comando <span class="comando">npm run test</span>
       </section>
 
       <section>
@@ -190,6 +194,12 @@
         <p>
           Una vez implementadas todas las funciones con los respectivos test,
           tocará ver si todos los test están en verde o tenemos algún fallo.
+
+          Acuérdate de eliminar la linea de por defecto tienen todos los test:
+
+          <span class="comando">expect(true).toBe(true);</span> e implementar el código real de tus tests.
+
+          Todos los test se encuentran en la carpeta de <span class="comando">./src/test</span>
         </p>
 
         <img src="./assets/testResults.png" />
