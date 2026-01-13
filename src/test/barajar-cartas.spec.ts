@@ -1,7 +1,13 @@
-import { it, expect, describe } from 'vitest';
+import { barajarCartas } from "../motor";
 
-describe('test para barajarCartas', () => {
-  it('dummy spec', () => {
-    expect(true).toBe(true);
-  })
-})
+describe("barajarCartas", () => {
+  it("debería devolver un array vací cuando la baraja es un array vacío", () => {
+    // Arrange
+
+    // Act
+    const resultado = barajarCartas([]);
+
+    // Assert
+    expect(resultado).toEqual([]);
+  });
+});
