@@ -78,3 +78,39 @@ Esta función se ejecutará cuando pulsemos sobre el botón de iniciar partida. 
 - Barajar el array de cartas.
 - Actualizar el array de cartas del tablero con las cartas barajadas del punto anterior.
 - Modificar el estado de la partida a `CeroCartasLevantadas`.
+
+
+## Layout
+
+Este ejercicio podemos enfocarlo de varias maneras a nivel de layout, vamos a ver que opciones tenemos:
+
+- Podemos dejar creados los 12 divs, añadir por cada uno un identificador y luego desde código ir accediendo a cada elemento. Este enfoque tiene un problema, y es que si queremos que el juego tenga unas dimensiones más grandes, vamos a tener que añadir tantos divs y tantos identificadores como queramos que crezca, por lo tanto nuestro html puede terminar siendo enorme.
+- La otra opción sería crear los 12 divs desde código javascript para añadir de manera fácil tantos divs como queramos. La dificultad que tiene esta opción en este punto de nuestro aprendizaje, es que necesitamos crear las diferentes funciones y añadir algo de complegidad que puede ser difícil de entender ahora mismo.
+
+Si esto fuera un proyecto real y nuestro juego saliera a producción y lo comercializáramos, la segunda opción será la más adecuada, ya que permitimos que nuestro juego crezca, sin necesidad de hacer grandes cambios en el código con la consecuencia posibilidad de cometer errores en el código, perder tiempo intentando duplicar código etc.
+
+Pero como estamos aprendiendo y es un juego que nos ayuda a ir mejorando nuestra manera de aprender a ir escribiendo código con lógica, vamos a asumir que van a ser 12 divs y no va a crecer. Por lo tanto nos podemos quedar con la primera opción.
+
+### Iniciando el código html
+
+Pensemos que es lo que necesitamos, un "tablero" y dentro n número de casillas que van a reprensentar cada una de las fótos de los animales con los que vamos ha hacer las parejas.
+
+Por lo tanto, lo primero que haremos será disponer en el html de un div principal que será el que contenga las casillas del juego.
+
+```html
+  <div class="contenedor"><div>
+```
+
+Ahora podemos añadir las diferentes casillas que formarán el tablero de nuestro juego, vamos a ir pensando en pequeño para que nos sea fácil entenderlo todo.
+
+```html
+  <div class="contenedor">
+    <div class="carta" data-indice-id="0">
+      <img data-indice-id="0" />
+    </div>
+    <div class="carta" data-indice-id="1">
+      <img data-indice-id="1" />
+    </div>
+  <div>
+```
+
