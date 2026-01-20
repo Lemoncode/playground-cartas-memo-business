@@ -202,8 +202,7 @@ Ya hemos visto que cada indice que representa a nuestros divs e imágenes corres
 
 ```JavaScript
 const mapearDivsACartas = (indiceCarta: number): void => {
-  const dataIndiceId = `[data-indice-id="${indiceCarta}"]`;
-  const elementoDiv = document.querySelector(`div${dataIndiceId}`);
+  const elementoDiv = document.querySelector(`div[data-indice-id="${indiceCarta}"]`);
 
   if (
     elementoDiv &&
