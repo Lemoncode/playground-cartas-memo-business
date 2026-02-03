@@ -196,7 +196,7 @@ Ahora si quieres podemos colocar en el html los 12 divs que va a tener nuestro j
 
 ## Iterar por todos los elementos
 
-Una vez tenemos los doce elementos que van a formar nuestro juego, solo nos queda, que cada elemento al yo hacer click sobre el pueda ejecutar la lógica del juego.
+Una vez tenemos los doce elementos que van a formar nuestro juego, solo nos queda hacer la función que vamos a ejecutar al hacer click en cada elemento.
 
 Ya hemos visto que cada indice que representa a nuestros divs e imágenes corresponde a la posición del array de cartas. Lo más lógico sería, iterar sobre este array y con cada índice ir localizando nuestro elemento div y programar el evento click.
 
