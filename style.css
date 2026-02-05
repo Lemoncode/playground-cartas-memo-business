@@ -9,6 +9,7 @@ body {
   justify-content: center;
   padding: 40px 0;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 /* Contenedor principal */
@@ -75,4 +76,10 @@ a:hover {
 .tituloSeccion {
   color: #0b3d91;
   text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
